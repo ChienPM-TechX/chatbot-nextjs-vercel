@@ -52,8 +52,22 @@ export const ChatInput = ({ handleInputChange, handleSubmit, input, setInput }: 
   };
 
   return (
-    <div className="z-10 w-full p-3 bg-zinc-900">
+    <div className="z-10 w-full p-3 bg-slate-50">
       <div className="mx-auto flex flex-col gap-3 items-center max-w-4xl">
+
+        {/* Hiển Thị File Được Chọn */}
+        {selectedFile && (
+          <div className="flex items-center gap-2 w-full">
+            <span className="text-black text-zinc-950 truncate">{selectedFile.name}</span>
+            <button
+              onClick={handleClearFile}
+              className="text-red-500 hover:text-red-400 text-sm"
+            >
+              Remove
+            </button>
+          </div>
+        )}
+
         {/* Input và Nút Gửi */}
         <div className="flex flex-row items-center gap-3 w-full">
           {/* Attachment Button */}
@@ -99,18 +113,7 @@ export const ChatInput = ({ handleInputChange, handleSubmit, input, setInput }: 
           </Button>
         </div>
 
-        {/* Hiển Thị File Được Chọn */}
-        {selectedFile && (
-          <div className="flex items-center gap-2 w-full">
-            <span className="text-sm text-zinc-300 truncate">{selectedFile.name}</span>
-            <button
-              onClick={handleClearFile}
-              className="text-red-500 hover:text-red-400 text-sm"
-            >
-              Remove
-            </button>
-          </div>
-        )}
+
       </div>
     </div>
   );

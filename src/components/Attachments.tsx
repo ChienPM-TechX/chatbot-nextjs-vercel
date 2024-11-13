@@ -38,7 +38,7 @@ export const Attachments = ({
 
             {/* Hiển thị tên file được chọn */}
             {selectedFile && (
-                <span className="text-sm text-zinc-400">{selectedFile.name}</span>
+                <span className="text-black text-zinc-950">{selectedFile.name}</span>
             )}
         </div>
     );
