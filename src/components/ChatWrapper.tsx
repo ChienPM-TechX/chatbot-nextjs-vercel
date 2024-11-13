@@ -5,6 +5,7 @@ import { Message, useChat } from "ai/react";
 import { Messages } from "./Messages";
 import { ChatInput } from "./ChatInput";
 import { Sidebar } from "./sidebar";
+import { LayoutOutlined } from "@ant-design/icons";
 
 export const ChatWrapper = ({
   sessionId,
@@ -24,19 +25,21 @@ export const ChatWrapper = ({
   });
 
   return (
-    <div className="relative min-h-full bg-white flex">
+    <div className="relative min-h-screen flex bg-slate-800 text-zinc-200">
       {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} />
 
       {/* Main Chat Area */}
       <div
-        className={`flex-1 bg-zinc-900 flex flex-col justify-between transition-all duration-300 ${isSidebarOpen ? "ml-64" : "ml-0"
+        className={`flex-1 flex flex-col justify-between transition-all duration-300 ${isSidebarOpen ? "ml-64" : "ml-0"
           }`}
       >
-        <div className="flex-1 text-black bg-zinc-800 justify-between flex flex-col">
+        {/* Chat Messages */}
+        <div className="flex-1">
           <Messages messages={messages} />
         </div>
 
+        {/* Chat Input */}
         <ChatInput
           input={input}
           handleInputChange={handleInputChange}
@@ -45,15 +48,15 @@ export const ChatWrapper = ({
         />
       </div>
 
-      {/* Nút Open */}
-      {!isSidebarOpen && (
+      {/* Toggle Sidebar Button */}
+      <div className="fixed top-4 left-4 z-50">
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 bg-zinc-700 text-zinc-200 rounded-full p-2 hover:bg-zinc-600 z-50"
+          className="p-2 rounded-full bg-zinc-700 hover:bg-zinc-600 text-white shadow"
         >
-          Open
+          <LayoutOutlined className="text-xl" />
         </button>
-      )}
+      </div>
     </div>
   );
 };

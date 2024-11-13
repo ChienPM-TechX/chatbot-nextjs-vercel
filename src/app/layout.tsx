@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(inter.className, "min-h-screen antialiased")}>
         <Providers>
-          <main className="h-screen dark text-foreground bg-background">{children}</main>
+          <main className="h-screen text-foreground bg-background">{children}</main>
         </Providers>
       </body>
     </html>

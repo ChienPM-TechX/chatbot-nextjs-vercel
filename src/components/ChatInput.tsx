@@ -17,7 +17,7 @@ interface ChatInputProps {
 
 export const ChatInput = ({ handleInputChange, handleSubmit, input, setInput }: ChatInputProps) => {
   return (
-    <div className="z-10 bg-zinc-900 fixed bottom-0 left-0 w-full p-3">
+    <div className="z-10  w-full p-3">
       <div className="mx-auto flex flex-row gap-3 items-center max-w-4xl">
         {/* Input box */}
         <Input
@@ -31,7 +31,7 @@ export const ChatInput = ({ handleInputChange, handleSubmit, input, setInput }: 
             }
           }}
           placeholder="Type your message..."
-          className="flex-1 rounded-lg bg-zinc-800 text-base text-white placeholder-zinc-500 px-4 py-2 border border-zinc-700 focus:ring-2 focus:ring-zinc-500 focus:outline-none"
+          className="flex-1 rounded-lg  text-base text-white placeholder-zinc-500 px-4 py-2 border border-zinc-700 focus:ring-2 focus:ring-zinc-500 focus:outline-none"
         />
 
         {/* Send Button */}
