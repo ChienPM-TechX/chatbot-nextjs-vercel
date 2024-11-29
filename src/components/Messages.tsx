@@ -31,7 +31,7 @@ export const Messages = ({ messages }: MessagesProps) => {
         ))
       ) : (
         <div className="flex-1 flex flex-col items-center justify-center gap-2">
-          <MessageSquare className="size-8 text-blue-500" />
+          <MessageSquare className="size-40 text-blue-500" />
           <h3 className="font-semibold text-xl text-black">
             You&apos;re all set!
           </h3>
