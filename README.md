@@ -18,13 +18,7 @@ Configure environment variables. The environment variable values in the .env fil
 touch .env
 ````
 
-Run start localhost:3000
-
-```
-pnpm run dev
-or
-npm run dev
-```
+copy on .env
 
 ````
 UPSTASH_VECTOR_REST_URL="https://liberal-flounder-92182-us1-vector.upstash.io"
@@ -33,3 +27,13 @@ QSTASH_TOKEN=eyJVc2VySUQiOiIzMTAxODg1Ni01OGExLTRiODctOTU4Ni02NWNlNWIwNThhNzIiLCJ
 UPSTASH_REDIS_REST_URL="https://curious-elk-23447.upstash.io"
 UPSTASH_REDIS_REST_TOKEN="AVuXAAIjcDEyOGExZmI3YThiYzk0NTQyOWM2NzY4Njc2MDY5NTliZXAxMA"
 ````
+
+Run start localhost:3000
+
+```
+pnpm run dev
+or
+npm run dev
+```
+
+
