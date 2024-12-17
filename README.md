@@ -1,26 +1,26 @@
 Clone the repository from Github
 
-``
+````
 git clone https://github.com/ChienPM-TechX/chatbot-nextjs-vercel.git
 cd chatbot-nextjs-vercel
-``
+````
 
 Install dependencies
 
-``
+````
 npm install -g pnpm
 pnpm install or npm install
-```
+````
 
 Configure environment variables. The environment variable values in the .env file as needed (e.g., API keys, backend URLs).
 
-``
+````
 touch .env
-``
+````
 
 Run start localhost:3000
 
-``
+```
 pnpm run dev
 or
 npm run dev
